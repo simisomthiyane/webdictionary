@@ -1,0 +1,112 @@
+/*default*/
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    size: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    background-color: rgb(244, 206, 206);
+}
+
+.wrapper {
+    color: cornsilk;
+    background-color: rgb(241, 97, 97);
+    padding: 1em;
+    box-shadow: 0px 2px 8px 0px #444444;
+    display: block;
+    position: relative;
+    padding-bottom: 80vh;
+}
+
+.form {
+    /* background-color: rgb(97, 123, 241); */
+    /* border: black dotted 1px; */
+    /* text-align: center; */
+    margin: 0 auto;
+}
+
+::placeholder {
+    font-style: italic;
+    color: cornsilk;
+}
+
+.description {
+    background-color: rgb(97, 123, 241);
+    /* border: black dotted 1px; */
+    text-align: center;
+    margin-right: 25%;
+    margin-left: 25%;
+
+    padding: 2em;
+}
+
+.input {
+    color: cornsilk;
+    border: cornsilk solid 2px;
+    border-radius: 9px 9px 9px 9px;
+    padding: 0.5em;
+    width: 9rem;
+
+    opacity: 0.8;
+    display: inline;
+    position: relative;
+    background: transparent;
+    outline: none;
+}
+
+.button {
+    display: inline;
+    position: relative;
+    padding: 0px;
+}
+
+.inputel {
+    opacity: 1;
+    display: inline;
+    width: 7rem;
+    position: relative;
+    background: transparent;
+    border: none;
+    scrollbar-highlight-color: transparent;
+}
+
+.description {
+    border: cornsilk solid 2px;
+    border-radius: 9px 9px 9px 9px;
+    padding: 0.5em;
+    text-align: left;
+    width: 5rem;
+    ;
+
+    color: cornsilk;
+    display: block;
+    position: absolute;
+    background: transparent;
+    outline: none;
+}
+
+.input:hover {
+    opacity: 1;
+    border: cornsilk dotted 2px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 5%;
+    left: 1em;
+    color: rgb(52, 39, 39) !important;
+
+}
+
+#footer a {
+    text-decoration: none;
+    color: rgb(52, 39, 39) !important;
+}
+
+a:hover {
+    text-decoration: underline;
+    border-bottom: rgb(52, 39, 39) dotted 1px;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Web Dictionary</title>
+</head>
+<script src="dist/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$("document").ready(function () {
+		//default
+
+		//UI Effects
+		//input elements FX at hover
+		$(".input").hover(function () {
+			$(".input").animate({
+				width: "15em"
+			}, 200);
+		});
+
+		//data manipulation
+		//get data from input element at button click
+		$(".button").click(function () {
+			//check if not empty
+			//if ($(".input").val() != "") {
+				////////////////////////////ORIGINAL//////
+
+/* 				const url = 'https://api.dictionaryapi.dev/api/v2/entries/en/' + $(".input").val().toLowerCase();
+				console.log(url);
+
+				fetch(url).then(
+					function (response) {
+						return response.json();
+					}
+				).then(
+					function (data) {
+						let jsonArray = JSON.parse(data);
+						$(".description").text(JSON.parse(data));
+					}
+				) */
+				////////////////////////////ORIGINAL//////
+				
+
+
+				//getting data from API////////////////////////////////////////////////
+
+				//const word = window.document.getElementById('word');
+
+
+			
+
+
+
+				output = window.document.getElementsByClassName('description');
+
+				// const btnaddjson = window.document.getElementById('addjson').addEventListener('click',addjson);
+				function addjson() {
+					output.innerHTML = "";
+					//get local stored json file to browser js
+					const url = 'word.json';
+
+					fetch(url).then(
+						function (response) {
+							return response.json();
+						}
+					).then(
+						function (data) {
+							if (!Array.isArray(data)) {
+								output.innerHTML = "";
+								var pel = document.createElement('p');
+								pel.innerHTML = "Word not found.";
+								output.appendChild(pel);
+							}
+
+
+
+							window.console.log(data[0].meanings.length);
+							window.console.log(data[0].meanings[0].definitions.length);
+
+							data[0].meanings.forEach(definitions => {
+								//console.log(definitions);
+								//code
+								definitions.definitions.forEach(definition => {
+									//console.log(definition.definition);
+
+									//display output
+									var pel = document.createElement('p');
+									pel.innerHTML = definition.definition;
+									output.appendChild(pel);
+
+								})
+							});
+						}
+					)
+				}
+
+
+
+
+
+				//////////////////////////////////////////////////////////////////////
+
+				/////////////////////////
+			//} else {
+			//	console.log("no input here.");
+			//}
+		});
+
+	});
+</script>
+
+<link href="css/main.css" rel="stylesheet">
+<link href="dist/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<body>
+		<div class="container g-1">
+			<div class="wrapper">
+				<div class="form">
+					<div>
+						<input type="text" name="word" id="word" class="input" pattern="/^[A-Za-z]+$/" placeholder="Seach for word...">
+						<div class="button">
+							<img class="button" src="icons/search.svg">
+						</div>
+					</div>
+					<div class="description">fffhhh</div>
+				</div>		
+			</div>
+		</div>
+		<div id="footer">
+			<small>Powered by <a href="https://dictionaryapi.dev/"><em>Free Dictionary API.</em></a></small> |
+			<small>Developer <a href="#"><em>github</em></a></small>
+			<small>Source code <a href="#"><em>github</em></a></small>
+		</div>
+	</body>
+</html>
