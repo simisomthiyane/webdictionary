@@ -9,7 +9,7 @@
     margin: 0;
     font-size: 100%;
     size: 100%;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
 
 }
 
@@ -51,7 +51,11 @@ body {
     color: var(--cornsilk );
 }
 
-
+button{
+    outline: none;
+    background-color: transparent;
+    border:none;
+}
 
 .button {
     display: inline;
@@ -113,4 +117,29 @@ audio{
 .link:hover {
     text-decoration: underline;
     border-bottom: var(--dark) dotted 1px;
+}
+
+
+
+/* defualt */
+/* .description{
+    display: none;
+}
+.word-serched,audio{
+    display: none;
+}
+hr{
+    display: none;
+}*/
+.resp-error{
+    display: none;
+} 
+
+#outputword{
+    width: 50%;
+}
+
+/*fonts*/
+h4{
+    font-family:'Lucida Sans Unicode';
 }
