@@ -16,7 +16,7 @@ jQuery(function ($) {
 
 	//at click on link open sub widows  
 	$(".sourceCode").click(function () {
-			let sub = window.open("https://www.github.com/SimisoMT/WebDictionary", "Web Dictionary", "toolbar=no,status=no,menubar=no,location=center,resizable=no,width=500,height=500");
+			let sub = window.open("https://www.github.com/SimisoMT/webdictionary", "Web Dictionary", "toolbar=no,status=no,menubar=no,location=center,resizable=no,width=500,height=500");
 			sub.focus();
 		} //end of function
 	); //end
