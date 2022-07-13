@@ -39,7 +39,7 @@ jQuery(function ($) {
 
 	//at hover on input element animate
 
-	$(".moveUpPage").hover(function () {
+	$("div,wrapper").hover(function () {
 			if ($(".moveUpPage").css('width') !== '20%') {
 				$(".moveUpPage").animate({
 					width: "20%"
