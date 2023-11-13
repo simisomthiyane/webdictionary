@@ -1,0 +1,154 @@
+/**
+* Template Name: Web Dictionary - v2.0.0
+* Author: https://github.com/simisomthiyane/
+* License:
+*/
+
+:root {
+    /*default*/
+    --white: white;
+    --dark: rgb(52, 39, 39);
+    --pink: rgb(237, 127, 127);
+    --pink-darker: rgb(236, 82, 82);
+    --yellow : rgb(232, 159, 33);
+
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    size: 100%;
+}
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+    font-family:'poppins' !important;
+    background-color: var(--pink);
+    color: var(--white);
+    position: relative;
+
+    min-width: 178px;
+  }
+  
+
+  @media (min-width: 1024px) {
+
+  }
+
+a,input{
+    color: var(--white);
+}
+
+a:hover{
+    color: var(--pink-darker);
+}
+.warning{color:var(--white);
+}
+
+input{
+  font-family: 'poppinsBlack' !important;
+}
+/*--------------------------------------------------------------
+# wrappers
+--------------------------------------------------------------*/
+.context-wrapper{
+    background-color: var(--pink-darker);
+    /*height: 100vh;*/
+}
+
+.word-finder-wrapper{
+    background-color: var(--pink-darker);
+    border-radius: 15px 15px 15px 15px;
+}
+
+.word-difinition-wrapper{
+    border-left: var(--pink) solid 1px;
+    text-align: left !important;
+}
+
+.type-of-speech-wrapper, .info-wrapper{
+    background-color: var(--pink);
+}
+
+/*--------------------------------------------------------------
+# Nav
+--------------------------------------------------------------*/
+.word{
+    border: var(--white) solid 2px;
+    color: var(--white);
+    border-radius: 9px 9px 9px 9px;
+    margin-bottom: 0.5em;
+
+    display: inline;
+    position: relative;
+    background: transparent;
+    outline: none !important;
+}
+
+input[type="submit"]{
+    border-radius: 9px 9px 9px 9px;
+    color: var(--white);
+    font-weight: bolder;
+}
+
+.word:hover,.word:focus{
+    border: var(--white) dotted 2px;
+    color: var(--white);
+    background: transparent;
+    outline: none !important;
+}
+
+::placeholder {
+    font-style: italic;
+    color: var(--white);
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background: var(--pink);
+  }
+  
+  #preloader:before {
+    content: "";
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    border: 6px solid var(--pink-darker);
+    border-top-color:var(--pink);
+    border-bottom-color: var(--pink);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: animate-preloader 1s linear infinite;
+    animation: animate-preloader 1s linear infinite;
+  }
+  
+  @-webkit-keyframes animate-preloader {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes animate-preloader {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
