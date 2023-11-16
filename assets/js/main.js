@@ -152,7 +152,7 @@
         fetchApiJson("greeting");
         break;
       case 4:
-        fetchApiJson();
+        fetchApiJson("salute");
         break;
       case 5:
         fetchApiJson("welcome");
