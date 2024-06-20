@@ -1,5 +1,6 @@
 # webdictionary (V2.0.0)
-Web Dictionary using API at https://dictionaryapi.dev/ .
+Mobile Response Web Dictionary which categories results by part of speech and gives examples.
+It using API from https://dictionaryapi.dev/ .
 
 Web-App URL https://willowy-stroopwafel-d2b737.netlify.app/ .
 
